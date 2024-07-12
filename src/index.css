@@ -30,6 +30,13 @@ body {
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
+.object {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background: transparent;
+}
+
 .container .popup {
   position: absolute;
   top: 0;
