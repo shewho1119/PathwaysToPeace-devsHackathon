@@ -18,8 +18,8 @@ body {
   border-radius: 50%;
   padding: 15px;
   margin: 10px;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   font-size: 1.1rem;
   display: flex;
   justify-content: center;
@@ -27,10 +27,10 @@ body {
   flex-direction: column;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);	
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-.container .popup{
+.container .popup {
   position: absolute;
   top: 0;
   font-size: 0.8rem;
@@ -41,10 +41,14 @@ body {
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   opacity: 0;
   pointer-events: none;
-  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 1s ease-in-out;
 }
 
-.container .popup::before{
+.container .popup::before {
   position: absolute;
   content: "";
   height: 8px;
@@ -53,16 +57,18 @@ body {
   bottom: -3px;
   left: 50%;
   transform: translate(-50%) rotate(45deg);
-  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition: all 1s ease-in-out;
 }
-.container .item:hover .popup{
+
+.container .item:hover .popup {
   top: -45px;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
+
 .container .item:hover span,
-.container .item:hover .popup{
+.container .item:hover .popup {
   text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
 
