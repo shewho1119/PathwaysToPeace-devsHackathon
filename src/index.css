@@ -2,10 +2,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .container {
   text-align: center;
   margin-top: 360px;
 }
+
 .btn {
   border: 1px solid #3498db;
   background: none;
@@ -16,10 +18,12 @@ body {
   margin: 10px;
   transition: 0.8s;
 }
+
 .btn:hover {
   background-color: #3498db;
   color: white;
 }
+
 .btn::before {
   content: "";
   position: absolute;
@@ -29,6 +33,20 @@ body {
   z-index: -1;
   transition: 0.8s;
 }
+
+.popup {
+  width: 400px;
+  background: #3498db;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
