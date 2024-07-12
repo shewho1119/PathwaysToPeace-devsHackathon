@@ -10,10 +10,17 @@
 <body>
   <ul class="container">
     <li class="item">
-        <span class="object">Button1111</span>
+        <span onclick="hide()" class="object">Button1111</span>
         <span class="popup">Some text in the Popup..</span>
     </li>
   </ul>
+
+  <script>
+    function hide() {
+      var popup = document.querySelector('.item');
+      popup.style.display = 'none';
+    }
+    </script>
 </body>
 
 </html>
