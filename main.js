@@ -114,26 +114,26 @@ function calculateResult() {
   if (resultValue == 0) {
       transitionToPage('./character1.html');
   } else if (resultValue > 0 && resultValue <= 25) {
-      transitionToPage('./character1.html');
+      transitionToPage('./character2.html');
   } else if (resultValue > 25 && resultValue <= 50) {
-      transitionToPage('./character1.html');
+      transitionToPage('./character3.html');
   } else if (resultValue > 50 && resultValue <= 75) {
-      transitionToPage('./character1.html');
+      transitionToPage('./character4.html');
   } else if (resultValue > 75) {
-      transitionToPage('./character1.html');
+      transitionToPage('./character5.html');
   } else {
     transitionToPage('./character1.html');
   }
 }
 
-function downloadImg() {
+function downloadImg(filenameHref) {
     html2canvas(document.getElementById('results-container')).then(function(canvas) {
       // Create a link element
       let link = document.createElement('a');
       // Set the download attribute with a filename
       link.download = 'PathwayOfPeaceResults.png';
       // Convert the canvas to a data URL and set it as the href attribute
-      link.href = canvas.toDataURL();
+      link.href = filenameHref;
       // Append the link to the body (required for Firefox)
       document.body.appendChild(link);
       // Trigger a click on the link to download the image
@@ -202,3 +202,4 @@ function getCollected() {
     }, 2000);
   }
 }
+
