@@ -17,8 +17,19 @@
         src="./icons/darkmode_icon.png"
     /></i>
 
-    <div class="mainBody">
-      <p class="subtitle">BUBBLE GUPPIES PRESENTS</p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <div id="mainBody" class="mainBody">
+      <div id="results-container">
+      <img src="./character/survivor-card.png" style="width: 30rem;" class="results-container survivor">
+      <img src="./character/striver-card.png" style="width: 30rem;" class="results-container striver">
+      <img src="./character/helper-card.png" style="width: 30rem;" class="results-container helper">
+      <img src="./character/innovator-card.png" style="width: 30rem;" class="results-container innovator">
+      <img src="./character/advocate-card.png" style="width: 30rem;" class="results-container advocate">
     </div>
+    </div>
+    <a onclick="downloadImg('./character/survivor-card.png')"><div id="share-results" class="animated share-results">Share Results</div></a>
+    <a onclick="transitionToPage('./home.html')"><div class="animated end-button" >Replay</div></a>
+    <script>showEndButton()</script>
+    <script>showResults()</script>
   </body>
 </html>

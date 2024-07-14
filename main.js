@@ -112,18 +112,19 @@ function calculateResult() {
   Number(localStorage.getItem('choice7')) + Number(localStorage.getItem('choice8'));
   console.log(resultValue)
   if (resultValue == 0) {
-      transitionToPage('./character1.html');
+    localStorage.setItem("result", 1)
   } else if (resultValue > 0 && resultValue <= 25) {
-      transitionToPage('./character2.html');
+    localStorage.setItem("result", 2)
   } else if (resultValue > 25 && resultValue <= 50) {
-      transitionToPage('./character3.html');
+    localStorage.setItem("result", 3)
   } else if (resultValue > 50 && resultValue <= 75) {
-      transitionToPage('./character4.html');
+    localStorage.setItem("result", 4)
   } else if (resultValue > 75) {
-      transitionToPage('./character5.html');
+    localStorage.setItem("result", 5)
   } else {
-    transitionToPage('./character1.html');
+    localStorage.setItem("result", 0)
   }
+  transitionToPage('./results.html');
 }
 
 function downloadImg(filenameHref) {
@@ -203,3 +204,20 @@ function getCollected() {
   }
 }
 
+function showResults() {
+  setTimeout(function() {
+    if (localStorage.getItem("results") == 1) {
+      document.querySelector('.survivor').style.opacity = 1;
+    } else if (localStorage.getItem("results") == 2) {
+      document.querySelector('.striver').style.opacity = 1;
+    } else if (localStorage.getItem("results") == 3) {
+      document.querySelector('.helper').style.opacity = 1;
+    } else if (localStorage.getItem("results") == 4) {
+      document.querySelector('.innovator').style.opacity = 1;
+    } else if (localStorage.getItem("results") == 5) {
+      document.querySelector('.advocate').style.opacity = 1;
+    } else {
+      document.querySelector('.survivor').style.opacity = 1;
+    }
+  }, 500);
+}
