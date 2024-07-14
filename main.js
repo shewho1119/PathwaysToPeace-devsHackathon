@@ -206,15 +206,15 @@ function getCollected() {
 
 function showResults() {
   setTimeout(function() {
-    if (localStorage.getItem("results") == 1) {
+    if (Number(localStorage.getItem("result")) == 1) {
       document.querySelector('.survivor').style.opacity = 1;
-    } else if (localStorage.getItem("results") == 2) {
+    } else if (Number(localStorage.getItem("result")) == 2) {
       document.querySelector('.striver').style.opacity = 1;
-    } else if (localStorage.getItem("results") == 3) {
+    } else if (Number(localStorage.getItem("result")) == 3) {
       document.querySelector('.helper').style.opacity = 1;
-    } else if (localStorage.getItem("results") == 4) {
+    } else if (Number(localStorage.getItem("result")) == 4) {
       document.querySelector('.innovator').style.opacity = 1;
-    } else if (localStorage.getItem("results") == 5) {
+    } else if (Number(localStorage.getItem("result")) == 5) {
       document.querySelector('.advocate').style.opacity = 1;
     } else {
       document.querySelector('.survivor').style.opacity = 1;
