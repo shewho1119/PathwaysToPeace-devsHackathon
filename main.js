@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 function showEndButton() {
   setTimeout(function() {
     document.querySelector('.end-button').style.opacity = 1;
-    localStorage.clear();
   }, 6000);
 }
 
