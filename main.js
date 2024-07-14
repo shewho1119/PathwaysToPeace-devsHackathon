@@ -46,6 +46,11 @@ function showEndButton() {
   }, 6000);
 }
 
+function clickEndButton() {
+  localStorage.clear();
+  transitionToPage("./home.html");
+}
+
 function showResultsButton() {
   setTimeout(function() {
     document.querySelector('.results-button').style.opacity = 1;
