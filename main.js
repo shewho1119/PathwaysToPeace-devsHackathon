@@ -127,14 +127,28 @@ function calculateResult() {
   transitionToPage('./results.html');
 }
 
-function downloadImg(filenameHref) {
+function downloadImg() {
+  let itemUrl = './character/survivor-card.png';
+    if (Number(localStorage.getItem("result")) == 1) {
+      itemUrl = './character/survivor-card.png';
+    } else if (Number(localStorage.getItem("result")) == 2) {
+      itemUrl = './character/striver-card.png';
+    } else if (Number(localStorage.getItem("result")) == 3) {
+      itemUrl = './character/helper-card.png';
+    } else if (Number(localStorage.getItem("result")) == 4) {
+      itemUrl = './character/innovator-card.png';
+    } else if (Number(localStorage.getItem("result")) == 5) {
+      itemUrl = './character/advocate-card.png';
+    } else {
+      itemUrl = './character/survivor-card.png';
+    }
     html2canvas(document.getElementById('results-container')).then(function(canvas) {
       // Create a link element
       let link = document.createElement('a');
       // Set the download attribute with a filename
       link.download = 'PathwayOfPeaceResults.png';
       // Convert the canvas to a data URL and set it as the href attribute
-      link.href = filenameHref;
+      link.href = itemUrl;
       // Append the link to the body (required for Firefox)
       document.body.appendChild(link);
       // Trigger a click on the link to download the image
