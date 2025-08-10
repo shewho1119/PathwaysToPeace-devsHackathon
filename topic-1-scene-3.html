@@ -8,7 +8,7 @@
     <title>Poverty</title>
   </head>
   <body>
-    <a onclick="transitionToPage('./home.html')"><div class="animated home-button"><img src="./icons/home.png" class="home-img"/></div></a>
+    <a onclick="transitionToPage('./html/home.html')"><div class="animated home-button"><img src="./icons/home.png" class="home-img"/></div></a>
     <i onclick="darkMode()"
       ><img
         id="darkModeIconToggle"
@@ -29,19 +29,19 @@
       ><img src="./icons/left.png" class="btn-icon"
     /></i>
 
-    <img src="./wheel.png" id="wheel-item" class="finding-items" style="position: absolute; left: 71%; top: 69%; width: 90px; opacity: 0.7; cursor: pointer;" onclick="showChoices(5)"/>
-    <img src="./shoes.png" id="shoes-item" class="finding-items" style="position: absolute; left: 59%; top: 65%; width: 50px; opacity: 0.5; cursor: pointer;" onclick="showChoices(6)"/>
-    <div id="project-container" style="background-image: url(left.jpg);">
+    <img src="./item-images/wheel.png" id="wheel-item" class="finding-items" style="position: absolute; left: 71%; top: 69%; width: 90px; opacity: 0.7; cursor: pointer;" onclick="showChoices(5)"/>
+    <img src="./item-images/shoes.png" id="shoes-item" class="finding-items" style="position: absolute; left: 59%; top: 65%; width: 50px; opacity: 0.5; cursor: pointer;" onclick="showChoices(6)"/>
+    <div id="project-container" style="background-image: url(scene-images/left.jpg);">
       <div class="scene-count">Scene 3/4</div>
       <div class="inventory-bar">
-        <img id="coins-img" src="./coins.png" class="inventory-item"/>
-        <img id="clothing-img" src="./clothing.png" class="inventory-item"/>
-        <img id="mirror-img" src="./mirror.png" class="inventory-item"/>
-        <img id="food-img" src="./food.png" class="inventory-item"/>
-        <img id="wheel-img" src="./wheel.png" class="inventory-item"/>
-        <img id="shoes-img" src="./shoes.png" class="inventory-item"/>
-        <img id="laptop-img" src="./laptop.png" class="inventory-item"/>
-        <img id="doll-img" src="./doll.png" class="inventory-item"/>
+        <img id="coins-img" src="./item-images/coins.png" class="inventory-item"/>
+        <img id="clothing-img" src="./item-images/clothing.png" class="inventory-item"/>
+        <img id="mirror-img" src="./item-images/mirror.png" class="inventory-item"/>
+        <img id="food-img" src="./item-images/food.png" class="inventory-item"/>
+        <img id="wheel-img" src="./item-images/wheel.png" class="inventory-item"/>
+        <img id="shoes-img" src="./item-images/shoes.png" class="inventory-item"/>
+        <img id="laptop-img" src="./item-images/laptop.png" class="inventory-item"/>
+        <img id="doll-img" src="./item-images/doll.png" class="inventory-item"/>
       </div>
     </div>
     <script>getCollected()</script>

@@ -60,6 +60,13 @@ a {
   margin-bottom: 2vh;
 }
 
+.character-image {
+  max-width: 80%;
+  height: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
 .loading-container {
   position: absolute;
   left: calc(50% - 300px);
@@ -204,7 +211,7 @@ a {
   height: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-size:contain;
+  background-size: contain;
   opacity: 100%;
   transition: 0.6s;
 }
@@ -267,9 +274,12 @@ a {
 }
 
 .preview-content {
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box; /* Firefox, other Gecko */
-  box-sizing: border-box; /* Opera/IE 8+ */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
   width: calc(100% - 20px);
   height: auto;
   margin: 10px;
@@ -348,8 +358,10 @@ a {
   font-size: 24px;
   padding: 16px;
   text-align: center;
-  opacity: 0; /* Initially hidden */
-  transition: opacity 2s; /* Transition duration */
+  opacity: 0;
+  /* Initially hidden */
+  transition: opacity 2s;
+  /* Transition duration */
 }
 
 .animated {
@@ -403,11 +415,12 @@ a {
 }
 
 .tagcloud {
-  font-family: 'Poppins', sans-serif;  
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 650;
   margin-left: 30%;
 }
+
 .tagcloud--item:hover {
   color: #36454F;
 }
@@ -603,7 +616,8 @@ a {
   background-color: #1c1c1c;
   border-radius: 16px;
   z-index: 10;
-  box-shadow: 0 200px 400px rgba(0, 0, 0, 0.5); /* Increased values for a more obvious shadow */
+  box-shadow: 0 200px 400px rgba(0, 0, 0, 0.5);
+  /* Increased values for a more obvious shadow */
 }
 
 .choice-button-1 {
