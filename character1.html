@@ -11,7 +11,6 @@
 </head>
 
 <body>
-  <i onclick="darkMode()"><img id="darkModeIconToggle" class="darkModeIcon" src="./icons/darkmode_icon.png" /></i>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <div id="mainBody" class="mainBody">
@@ -19,12 +18,15 @@
       <img src="character_image1.png" alt="Character 1" class="character-image" />
     </div>
   </div>
+
   <a onclick="downloadImg()">
     <div id="share-results" class="animated share-results">Share Results</div>
   </a>
+
   <a onclick="transitionToPage('./home.html')">
     <div class="animated end-button">Replay</div>
   </a>
+
   <script>showEndButton()</script>
 </body>
 

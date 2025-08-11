@@ -7,32 +7,35 @@
     <script src="./main.js"></script>
     <title>Poverty</title>
   </head>
-  <body>
-    <a onclick="transitionToPage('./home.html')"><div class="animated home-button"><img src="./icons/home.png" class="home-img"/></div></a>
-    <i onclick="darkMode()"
-      ><img
-        id="darkModeIconToggle"
-        class="darkModeIcon"
-        src="./icons/darkmode_icon.png"
-    /></i>
 
-    <i
+  <body>
+    <a onclick="transitionToPage('./home.html')">
+      <div class="animated home-button">
+        <img src="./icons/home.png" class="home-img"/>
+      </div>
+    </a>
+  
+    <a
       onclick="transitionToPage('./topic-1-scene-2.html')"
       id="right-direction"
       class="direction"
       ><img src="./icons/right.png" class="btn-icon"
-    /></i>
-    <i
+    /></a>
+
+    <a
       onclick="transitionToPage('./topic-1-scene-4.html')"
       id="left-direction"
       class="direction"
       ><img src="./icons/left.png" class="btn-icon"
-    /></i>
+    /></a>
 
     <img src="./item-images/coins.png" id="coins-item" class="finding-items" style="position: absolute; left: 60%; top: 73%; width: 50px; cursor: pointer;" onclick="showChoices(1)"/>
     <img src="./item-images/clothing.png" id="clothing-item" class="finding-items" style="position: absolute; left: 30%; top: 75%; width: 50px; opacity: 0.8; cursor: pointer;" onclick="showChoices(2)"/>
+    
+
     <div id="project-container" style="background-image: url(scene-images/front.jpg);">
       <div class="scene-count">Scene 1/4</div>
+      
       <div class="inventory-bar">
         <img id="coins-img" src="./item-images/coins.png" class="inventory-item"/>
         <img id="clothing-img" src="./item-images/clothing.png" class="inventory-item"/>
@@ -43,13 +46,14 @@
         <img id="laptop-img" src="./item-images/laptop.png" class="inventory-item"/>
         <img id="doll-img" src="./item-images/doll.png" class="inventory-item"/>
       </div>
+
     </div>
     <script>getCollected()</script>
 
     <div class="coins choice-modal">
-    <div class="modal-title">
+      <div class="modal-title">
       After picking up the coins you encounter a homeless person. What do you do?
-    </div>
+      </div>
       <div onclick="addToChoices('choice1', 9)" class="animated choice-button choice-button-1">Donate it to the homeless person in need</div>
       <div onclick="addToChoices('choice1', 10)" class="animated choice-button choice-button-2">Buy food to give to the homeless person</div>
       <div onclick="addToChoices('choice1', 1)" class="animated choice-button choice-button-3">Keep it for yourself instead of giving it away</div>

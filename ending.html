@@ -11,36 +11,11 @@
   </head>
 
   <body>
-    <i onclick="darkMode()"
-      ><img
-        id="darkModeIconToggle"
-        class="darkModeIcon"
-        src="./icons/darkmode_icon.png"
-    /></i>
 
     <div class="mainBody ending">
       <img id="left-hand" src="./icons/left-hand.png"></img>
       <img id="right-hand" src="./icons/right-hand.png"></img>
         <h1 class="mainText" style="position: relative; top: 50px">Empower Humanity</h1>
-        <div class="content" style="z-index: 2;"></div>
-        <script type="text/javascript" src="./TagCloud.min.js"></script>
-        <script>
-            var texts = [
-                'دعم', 'সমর্থন', '支持',
-                'podpora', 'støtte', 'ondersteuning',
-                'tuki', 'soutien', 'Unterstützung',
-                'υποστήριξη', 'תמיכה',
-                'समर्थन', 'támogatás', 'dukungan',
-                'sostegno', '支援', '지원',
-                'поддержка', 'მხარდაჭერა', 'suporta',
-                'podrška', 'աջակցություն',
-                'ድጋፍ', 'mbështetje', 'ondersteuning',
-                'Support', 'hỗ trợ', 'підтримка',
-                'การสนับสนุน', 'destek', 'stöd',
-                'suport', 'cefnogaeth',
-            ];
-            var tc = TagCloud('.content', texts);
-        </script>
         <a onclick="calculateResult()"><div class="animated results-button"  style="z-index: 10;"> View Results</div></a>
         <script>showResultsButton()</script>
     </div>

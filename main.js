@@ -1,33 +1,3 @@
-function darkMode() {
-  document.body.classList.toggle("darkMode");
-  let allText = document.querySelectorAll("button, p, h1");
-  let icon = document.getElementById("darkModeIconToggle");
-  for (var i = 0; i < allText.length; i++) {
-    allText[i].classList.toggle("darkModeText");
-  }
-
-  allIcons = document.querySelectorAll(".darkModeIcon, .btn-icon, .btn-down");
-  for (let j = 0; j < allIcons.length; j++) {
-    allIcons[j].style =
-      icon.getAttribute("src") == "./icons/darkmode_icon.png"
-        ? "filter: brightness(0) invert(1);"
-        : "filter: brightness(0.3)";
-  }
-
-  icon.src =
-    icon.getAttribute("src") == "./icons/darkmode_icon.png"
-      ? "./icons/lightmode_icon.png"
-      : "./icons/darkmode_icon.png";
-}
-
-function projectBtn() {
-  let dropdown = document.getElementById("dropdownId");
-  dropdown.classList.toggle("show");
-  document.getElementById("dropdown-icon").classList.toggle("dropdown-rotate");
-}
-
-window.onload = darkMode;
-
 window.transitionToPage = function (href) {
   document.querySelector("body").style.opacity = 0;
   setTimeout(function () {
@@ -69,7 +39,7 @@ function simulateLoading(duration) {
     } else {
       setTimeout(() => {
         window.location.href = 'home.html';
-      }, 1000); // Redirect 2 seconds after loading completes
+      }, 1000);
     }
   }
 
@@ -98,6 +68,7 @@ function addToInventory(key, item) {
 function addToChoices(key, value) {
   localStorage.setItem(key, value);
   let choices = document.querySelectorAll(".choice-modal");
+  // Hide all choices once a choice is made
   for (var i = 0; i < choices.length; i++) {
     choices[i].style.display = "none";
   }
@@ -128,17 +99,11 @@ function calculateResult() {
 
 function downloadImg() {
     html2canvas(document.getElementById('results-container')).then(function(canvas) {
-      // Create a link element
       let link = document.createElement('a');
-      // Set the download attribute with a filename
       link.download = 'PathwayOfPeaceResults.png';
-      // Convert the canvas to a data URL and set it as the href attribute
       link.href = canvas.toDataURL();
-      // Append the link to the body (required for Firefox)
       document.body.appendChild(link);
-      // Trigger a click on the link to download the image
       link.click();
-      // Remove the link from the document
       document.body.removeChild(link);
     });
   }
@@ -189,7 +154,7 @@ function getCollected() {
       }
       counter++;
     } else {
-      elements[i].style.opacity = 0.1; // optional: to show that item is not collected
+      elements[i].style.opacity = 0.1;
       if (item) {
         item.style.opacity = 1;
       }

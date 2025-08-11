@@ -37,7 +37,7 @@ a {
 
 .mainText {
   transition: 0.3s;
-  color: #1c1c1c;
+  color: white;
   padding: 0;
   margin: 0;
   font-size: 100px;
@@ -47,7 +47,7 @@ a {
 .subtitle {
   transition: 0.3s;
   font-size: 18px;
-  color: #1c1c1c;
+  color: white;
   opacity: 75%;
   margin-bottom: 2vh;
 }
@@ -108,8 +108,8 @@ a {
 .btn-icon {
   transition: 0.3s;
   zoom: 5%;
-  filter: brightness(0.5);
   padding: 150px;
+  filter: brightness(0) invert(1);
 }
 
 .btn-down {
@@ -385,7 +385,6 @@ a {
   top: 24px;
   left: 36px;
   width: 36px;
-  font-size: 24px;
   padding: 16px;
   text-align: center;
 }
@@ -487,8 +486,6 @@ a {
   scale: 1;
   overflow: hidden;
   opacity: 0.1;
-  -webkit-animation: breathing 8s ease-out infinite normal;
-  animation: breathing 8s ease-out infinite normal;
 }
 
 #right-hand {
@@ -498,64 +495,6 @@ a {
   scale: 1;
   left: 40%;
   top: -100%;
-  -webkit-animation: breathing 8s ease-out infinite normal;
-  animation: breathing 8s ease-out infinite normal;
-}
-
-
-
-@-webkit-keyframes breathing {
-  0% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-
-  25% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-
-  60% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-
-  100% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-}
-
-@keyframes breathing {
-  0% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-
-  25% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-
-  50% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-
-  75% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-
-  100% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-  }
 }
 
 .inventory-item {
@@ -595,15 +534,15 @@ a {
 }
 
 .results-button {
+  color: white;
+  border: 1px solid white;
+  background-color: #1c1c1c; 
   position: absolute;
   top: 200px;
   left: calc(50% - 118px);
   width: 220px;
-  font-size: 32px;
   padding: 20px;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.6s;
+  font-size: 32px;
 }
 
 .choice-modal {
@@ -617,7 +556,6 @@ a {
   border-radius: 16px;
   z-index: 10;
   box-shadow: 0 200px 400px rgba(0, 0, 0, 0.5);
-  /* Increased values for a more obvious shadow */
 }
 
 .choice-button-1 {
@@ -640,6 +578,7 @@ a {
   text-align: center;
   padding: 16px;
   font-size: 24px;
+  color: white;
 }
 
 .choice-button {
